@@ -6,7 +6,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "test": "jest",
-    "dev": "concurrently \"npm:dev-*\"",
+    "dev": "npm run codegen && concurrently \"npm:dev-*\"",
     "dev-next": "next dev",
     "dev-codegen": "dotenv -e .env.local -- npm run codegen -- -w",
     "codegen": "dotenv -e .env.local -- gql-gen --errors-only --config codegen.ts",
